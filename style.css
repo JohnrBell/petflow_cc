@@ -1,0 +1,110 @@
+body{
+	padding: 0;
+	margin: 10px auto;
+	color: #fff;
+	background-color: #333;
+	font-family: Helvetica, sans-serif; 
+}
+#itemcontainer, #cart{
+	background-color: rgba(255,255,255,.2);
+	position: absolute;
+	width: 45%;
+	min-width: 300px;
+	padding: 20px 0px;
+	/*margin-top: 100px;*/
+}
+#whatshappening{
+	text-align: center;
+	/*background-color: red;*/
+	height: 40px;
+	margin-bottom: 20px;
+}
+h1,h2,h3,h4{
+	padding:2px;
+	margin:2px;
+}
+h1{
+	text-transform: uppercase;
+	text-align: center;
+}
+.title .id{
+	font-size: 12px;
+}
+#itemcontainer{
+	margin-left: 3%;
+}
+#cart{
+	margin-left:52%;
+	min-height: 100px
+}
+
+
+.item{
+	position: relative; 
+	width: 90%;
+	border-bottom: 2px solid rgba(255,255,255,.2);
+	margin-bottom: 20px;
+	/*margin-top: 20px;*/
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	line-height: 20px;
+}
+.item .qty{
+	float: right;
+	position: relative;
+	margin-top: -25px;
+}
+.item .qty_val{
+	width: 68px;
+	border: 0px;
+	height: 20px;
+	margin-left: 5px;
+	background-color: rgba(255,255,255,.2);
+	font-weight: bold;
+	color: #fff;
+	font-size: 14pt;
+	padding-left: 5px;
+	text-align: center;
+}
+.item .addtocart{
+	position: relative;
+	float: right;
+	margin-top: -55px;
+	border: none;
+	height: 25px;
+}
+.item .removefromcart{
+	position: relative;
+	float: right;
+	margin-top: -55px;
+	border: none;
+	height: 25px;
+	width: 113px;
+}
+.options{
+	position: relative; 
+	width: 100%;
+	margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	line-height: 20px;
+	text-align: center;
+}
+#cartstatus{
+	position: relative;
+
+}
+.updateqty{
+	position: relative;
+	border: 0;
+	padding: 10px;
+	margin-right: 5px;
+}
+.clearcart{
+	position: relative;
+	border: 0;
+	padding: 10px;
+	margin-left: 5px;
+}
