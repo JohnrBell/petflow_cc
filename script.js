@@ -4,7 +4,7 @@ $(function(){
 	
 	$('#cart #unique').text(cart_id) //sets title of cart to the unique id. 
 	fixbuttons() //sets proper button visiblity
-	removeClickEvent()
+	removeClickEvent($('.removefromcart'))
 
 
 
@@ -72,8 +72,10 @@ $(function(){
 			if (exists==false){ //if the item did not exists...
 				$(item).clone().appendTo(last) //add it, not update
 				fixbuttons() //adjust buttons since it's in the cart now
+				// debugger
+				removeClickEvent(($('#cart').children('.item').last().children('.removefromcart'))) //adds a click event to be able to remove the item
 			}
-			removeClickEvent()		
+					
 			contents = $('#cart').children('.item') //gets all the items in the cart.
 			items = makeItemsArray(contents) //makes array/hash 
 			items = JSON.stringify(items); //encode items as json 
@@ -131,9 +133,11 @@ function fixbuttons(){ //sets proper button visiblity depending on ".item" locat
 	$('#cart .item .removefromcart').show() //hides the remove from cart buttons if item is in item list
 }
 
-function removeClickEvent(){
-		$('.removefromcart').on('click',function(event){ //remove button function
+function removeClickEvent(button){
+	// debugger
+		$(button).on('click',function(event){ //remove button function
 		if (checkforenable()){
+			// debugger
 			item_id = $(this).parent().attr('id') //get id from item div (where it's stored)
 			$(this).parent().remove() //remove from DOM
 			$('#whatshappening').text('DELETE item number: '+item_id+' from cart.') //prints whats happening.
